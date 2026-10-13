@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Acesse sua conta MusicPop para gerenciar lançamentos, dados e royalties.">
+  <title>Login — MusicPop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#072d76;--deep:#02163f;--pink:#ff006b;--yellow:#ffbf00;--cream:#f5f7fc}
+    *{box-sizing:border-box}body{margin:0;color:#fff;background:var(--deep);font-family:"Space Grotesk",sans-serif}a{color:inherit;text-decoration:none}
+    .page{min-height:100vh;display:grid;grid-template-columns:minmax(300px,.78fr) minmax(560px,1.22fr)}
+    .story{position:relative;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;padding:42px;background:linear-gradient(155deg,#06368c,#02163f)}
+    .story:after{content:"";position:absolute;width:520px;height:520px;right:-260px;bottom:-210px;border:92px solid var(--pink);border-radius:50%;opacity:.85}
+    .brand{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand img{width:160px;height:auto}.back{font-size:.82rem;font-weight:700;opacity:.72}.back:hover{opacity:1}
+    .pitch{position:relative;z-index:2;max-width:560px}.eyebrow{display:flex;align-items:center;gap:10px;color:#ff74ae;font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.eyebrow:before{content:"";width:26px;height:3px;background:var(--yellow)}
+    h1{margin:18px 0;font:800 clamp(3rem,6vw,6.5rem)/.88 "Manrope";letter-spacing:-.07em}p{max-width:520px;color:rgba(255,255,255,.7);font-size:1.05rem;line-height:1.6}.trust{position:relative;z-index:2;display:flex;gap:22px;color:rgba(255,255,255,.62);font-size:.76rem}.trust span:before{content:"✓";margin-right:7px;color:#31f59d;font-weight:800}
+    .form-side{display:flex;align-items:flex-start;justify-content:center;padding:34px;background:var(--cream)}.form-shell{width:min(760px,100%);overflow:hidden;border:1px solid #dfe5f1;border-radius:28px;background:#fff;box-shadow:0 28px 75px rgba(0,23,77,.15)}
+    .form-head{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:28px 30px 20px;color:var(--deep);border-bottom:1px solid #e6eaf2}.form-head h2{margin:0;font:800 1.55rem "Manrope"}.switch{padding:11px 16px;border-radius:999px;color:#fff;background:var(--pink);font-size:.78rem;font-weight:800}.form-shell iframe{display:block;width:100%;height:500px;border:0;background:#fff}.fallback{margin:0;padding:14px 24px 22px;color:#66708a;font-size:.78rem;text-align:center}.fallback a{color:var(--pink);font-weight:800}
+    @media(max-width:900px){.page{grid-template-columns:1fr}.story{min-height:430px;padding:28px}.story:after{width:330px;height:330px;right:-180px;bottom:-170px;border-width:58px}.trust{flex-wrap:wrap}.form-side{padding:18px}.form-shell{border-radius:20px}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="story">
+      <header class="brand"><a href="index.html"><img src="assets/musicpop-logo.png" alt="MusicPop"></a><a class="back" href="index.html">← Voltar ao site</a></header>
+      <div class="pitch"><span class="eyebrow">Área do artista</span><h1>Entre.<br>Crie.<br>Cresça.</h1><p>Seu catálogo, seus dados e seus royalties reunidos em um lugar feito para artistas independentes.</p></div>
+      <div class="trust"><span>Ambiente seguro</span><span>Seus direitos protegidos</span><span>Suporte humano</span></div>
+    </section>
+    <section class="form-side">
+      <div class="form-shell">
+        <div class="form-head"><h2>Fazer login</h2><a class="switch" href="cadastro.html">Criar conta grátis</a></div>
+        <iframe src="https://distro.musicpop.com.br/login-iframe" title="Login MusicPop"></iframe>
+        <p class="fallback">Problemas para carregar? <a href="https://distro.musicpop.com.br/sign_in" target="_blank" rel="noopener">Abra o login em uma nova guia.</a></p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
