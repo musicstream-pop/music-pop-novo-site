@@ -14,25 +14,25 @@
     .page{min-height:100vh;display:grid;grid-template-columns:minmax(300px,.72fr) minmax(600px,1.28fr)}
     .story{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;padding:42px;background:linear-gradient(155deg,#ff006b,#6b003d)}
     .story:after{content:"";position:absolute;width:490px;height:490px;right:-260px;bottom:-210px;border:90px solid #31f59d;border-radius:50%;opacity:.92}
-    .brand{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand img{width:160px;height:auto}.back{font-size:.82rem;font-weight:700;opacity:.76}.back:hover{opacity:1}
+    .brand{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand-mark{display:flex;align-items:center;gap:10px}.brand-mascot{width:48px;height:52px;overflow:hidden;flex:0 0 auto}.brand-mascot img{width:160px;max-width:none;height:auto;transform:translateX(-2px)}.brand-word{color:#fff;font:800 1.2rem "Manrope";letter-spacing:-.055em}.back{font-size:.82rem;font-weight:700;opacity:.86}.back:hover{opacity:1}
     .pitch{position:relative;z-index:2;max-width:520px}.eyebrow{display:flex;align-items:center;gap:10px;color:#fff1a4;font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.eyebrow:before{content:"";width:26px;height:3px;background:var(--yellow)}
     h1{margin:18px 0;font:800 clamp(3rem,5.4vw,6rem)/.9 "Manrope";letter-spacing:-.07em}p{max-width:500px;color:rgba(255,255,255,.8);font-size:1.02rem;line-height:1.6}.steps{position:relative;z-index:2;display:grid;gap:8px;color:rgba(255,255,255,.76);font-size:.78rem}.steps span{display:flex;align-items:center;gap:9px}.steps b{display:grid;place-items:center;width:23px;height:23px;border-radius:50%;color:var(--deep);background:#31f59d;font-size:.7rem}
     .form-side{display:flex;align-items:flex-start;justify-content:center;padding:34px;background:var(--cream)}.form-shell{width:min(820px,100%);overflow:hidden;border:1px solid #dfe5f1;border-radius:28px;background:#fff;box-shadow:0 28px 75px rgba(0,23,77,.15)}
-    .form-head{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:28px 30px 20px;color:var(--deep);border-bottom:1px solid #e6eaf2}.form-head h2{margin:0;font:800 1.55rem "Manrope"}.switch{padding:11px 16px;border-radius:999px;color:var(--navy);background:#eaf0fc;font-size:.78rem;font-weight:800}.form-shell iframe{display:block;width:100%;height:1500px;border:0;background:#fff}.fallback{margin:0;padding:14px 24px 22px;color:#66708a;font-size:.78rem;text-align:center}.fallback a{color:var(--pink);font-weight:800}
+    .form-head{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:28px 30px 20px;color:var(--deep);border-bottom:1px solid #e6eaf2}.form-head h2{margin:0;font:800 1.55rem "Manrope"}.switch{padding:11px 16px;border-radius:999px;color:var(--navy);background:#eaf0fc;font-size:.78rem;font-weight:800}.iframe-window{height:1020px;overflow:hidden;background:#fff}.form-shell iframe{display:block;width:100%;height:1640px;border:0;background:#fff;transform:translateY(-505px)}.fallback{margin:0;padding:14px 24px 22px;color:#66708a;font-size:.78rem;text-align:center;border-top:1px solid #edf0f5}.fallback a{color:var(--pink);font-weight:800}
     @media(max-width:900px){.page{grid-template-columns:1fr}.story{position:relative;height:auto;min-height:500px;padding:28px}.story:after{width:330px;height:330px;right:-190px;bottom:-180px;border-width:58px}.form-side{padding:18px}.form-shell{border-radius:20px}}
   </style>
 </head>
 <body>
   <main class="page">
     <section class="story">
-      <header class="brand"><a href="index.html"><img src="assets/musicpop-logo.png" alt="MusicPop"></a><a class="back" href="index.html">← Voltar ao site</a></header>
+      <header class="brand"><a class="brand-mark" href="index.html" aria-label="MusicPop"><span class="brand-mascot"><img src="assets/musicpop-logo.png" alt=""></span><span class="brand-word">MusicPop</span></a><a class="back" href="index.html">← Voltar ao site</a></header>
       <div class="pitch"><span class="eyebrow">Comece gratuitamente</span><h1>Sua próxima fase começa aqui.</h1><p>Crie seu acesso. Depois do cadastro, um consultor MusicPop entra em contato por e-mail ou WhatsApp para orientar os próximos passos.</p></div>
       <div class="steps"><span><b>1</b> Preencha seus dados</span><span><b>2</b> Receba o contato do consultor</span><span><b>3</b> Prepare seu lançamento</span></div>
     </section>
     <section class="form-side">
       <div class="form-shell">
         <div class="form-head"><h2>Criar conta grátis</h2><a class="switch" href="login.html">Já tenho uma conta</a></div>
-        <iframe src="https://distro.musicpop.com.br/apply-iframe" title="Cadastro MusicPop"></iframe>
+        <div class="iframe-window"><iframe src="https://distro.musicpop.com.br/apply-iframe" title="Cadastro MusicPop"></iframe></div>
         <p class="fallback">Problemas para carregar? <a href="https://distro.musicpop.com.br/apply" target="_blank" rel="noopener">Abra o cadastro em uma nova guia.</a></p>
       </div>
     </section>
